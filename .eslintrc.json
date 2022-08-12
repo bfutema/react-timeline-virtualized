@@ -1,0 +1,97 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "import-helpers",
+    "unused-imports"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "import/prefer-default-export": "off",
+    "camelcase": "off",
+    "@typescript-eslint/ban-types": "off",
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
+    "no-use-before-define": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "linebreak-style": 0,
+    "no-nested-ternary": 0,
+    "no-console": ["error", { "allow": ["tron", "log"] }],
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-param-reassign": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "import/no-duplicates": "off",
+    "no-plusplus": "off",
+    "react/no-unused-prop-types": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/require-default-props": "off",
+    "class-methods-use-this": "off",
+    "no-self-assign": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "module",
+          "/^!@types|!@assets|!@components|!@constants|!@contexts|!@helpers|!@hooks|!@interfaces|!@locales|!@pages|!@routes|!@services|!@store|!@styles|!@utils/",
+          "/^@types|@assets|@components|@constants|@contexts|@helpers|@hooks|@interfaces|@locales|@pages|@routes|@services|@store|@styles|@utils/",
+          ["parent", "sibling", "index"],
+          "/.styles/"
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+		],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
